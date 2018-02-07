@@ -47,5 +47,24 @@ namespace ListTests
             Assert.IsFalse(list.Contains("wilma"));
             Assert.That(list.Count() == 3);
         }
+
+        [Test]
+        public void ArrayTest()
+        {
+            Lists.Array list = new Lists.Array();
+            Assert.IsFalse(list.Contains("fred"));
+            Assert.That(list.Count() == 0);
+            list.AddLast("fred");
+            Assert.IsTrue(list.Contains("fred"));
+
+            list.AddLast("wilma");
+            list.AddLast("betty");
+            list.AddLast("barney");
+            Assert.IsTrue(list.Contains("wilma"));
+
+            list.Delete("wilma");
+            Assert.IsFalse(list.Contains("wilma"));
+            Assert.That(list.Count() == 3);
+        }
     }
 }

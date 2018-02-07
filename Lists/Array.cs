@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lists
 {
-    class Array
+    public class Array
     {
         private string[] myList = new string [100];
         private int count;
@@ -28,6 +28,18 @@ namespace Lists
                     count--;
                 }
             }
+        }
+
+        public bool Contains(string value)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                if (myList[i] == value)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         public void MoveUp(int index)
