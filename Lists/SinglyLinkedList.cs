@@ -103,8 +103,8 @@ namespace Lists
 
         private class Node
         {
-            public Node Next;
-            public string Data;
+            public Node Next { get; set; }
+            public string Data { get; set; }
 
             public Node(string data)
             {

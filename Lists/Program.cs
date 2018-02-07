@@ -29,6 +29,17 @@ namespace Lists
             Console.WriteLine("Count {0}", Dll.Count());
             Dll.DisplayNodes();
             Console.ReadLine();
+
+            Array arr = new Array();
+            arr.AddLast("bob");
+            arr.AddLast("mary");
+            arr.AddLast("ted");
+
+            arr.Delete("mary");
+            Console.WriteLine("Count {0}", arr.Count());
+            arr.DisplayData();
+            Console.ReadLine();
+
         }
     }
 }
