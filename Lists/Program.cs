@@ -16,8 +16,18 @@ namespace Lists
             Sll.AddLast("ted");
 
             Sll.Delete("mary");
-
+            Console.WriteLine("Count {0}", Sll.Count());
             Sll.DisplayNodes();
+            Console.ReadLine();
+
+            DoublyLinkedList Dll = new DoublyLinkedList();
+            Dll.AddLast("bob");
+            Dll.AddLast("mary");
+            Dll.AddLast("ted");
+
+            Dll.Delete("mary");
+            Console.WriteLine("Count {0}", Dll.Count());
+            Dll.DisplayNodes();
             Console.ReadLine();
         }
     }
